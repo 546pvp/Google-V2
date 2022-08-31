@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Google V2</title>
+        <meta name="autor" content="Tomas Pollak">
+        <meta name="copyright" content="ALL RIGHT RESERVED FOR GOOGLE COMPANY">
+        <link rel="icon" type="image/x-icon" href="favicon.PNG">
+    </head>
+    <body>
+    <div id="logocontainer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Google_2015_logo_colorless_mourning_period.svg/1920px-Google_2015_logo_colorless_mourning_period.svg.png" height="px" width="213px" id="googlelogo">
+    <p id="lightp"><i>Light</i></p>
+    </div>
+    
+        
+    <div id="inputbox">
+        <input id="inputtxt" type="text" placeholder="Search Something!"> <!-- <button id="submitbtn">Submit</button> -->  
+    </div>
+    
+    <footer id="copyfooter">
+        All Rigts Reserved For <a href="https://about.google/">Google LLC</a>
+    </footer>
+    
+    
+        <style>
+    body {
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,30,36,1) 87%);
+
+        }
+    
+    input[type=text] {
+      width: 215px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 40px;
+      font-size: 16px;
+      background-color: white;
+      padding: 12px 20px 12px 40px;
+      transition: width 0.4s ease-in-out;
+      text-align: left;
+      margin-top: 35px;
+    }
+    
+    input[type=text]:focus {
+      width: 60%;
+    }
+    
+    #inputbox {
+        text-align:center;
+    }
+    #logocontainer {
+        text-align: center;
+        margin-top: 220px;
+    }
+    /*#submitbtn {    
+        background: whitesmoke;
+        border: none;
+        border-radius: 40px
+    }
+    */
+    p#lightp {
+        margin-left: 159px;
+        margin-top: auto;
+        color: whitesmoke;
+        font-family: 'Courier New', Courier, monospace
+    }
+
+    footer#copyfooter {
+        transition-duration: 0.4s;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: whitesmoke;
+        position: fixed;
+        bottom: 15px;
+        font-size: 9;
+        border-bottom: 2px solid whitesmoke;
+        border-bottom-width: 1px;
+        width: 11%;
+        
+    }
+    footer#copyfooter:hover {
+        border-bottom-color: gray;
+        border-bottom-width: thick;
+        font-size: 13.6;
+        width: 15%
+    }
+    </style>
+    <script>
+        var input = document.getElementById('inputtxt');
+       /*
+       var submitbtn = document.getElementById('submitbtn');
+       submitbtn.addEventListener('click', function() {
+            location.assign(`https://google.com/search?q=${input.value}`);
+        }) */
+        window.addEventListener('keypress', searchup);
+
+        function searchup(e) {
+            if (e.key == 'Enter') {
+                location.assign(`https://google.com/search?q=${input.value}`);
+            }
+        }
+    </script>
+    </body>
+    </html>
